@@ -37,7 +37,7 @@ const scrollDown = document.getElementById("scroll-down");
 let currentSelection = "";
 
 // -------------------------------
-// Send text to background.js (Gemini API)
+// Send text to background.js (Gemini/OpenAI/Claude/etc API)
 // -------------------------------
 
 async function explainWithLLM(text) {
