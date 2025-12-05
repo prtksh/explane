@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Explane Popup",
+  "version": "1.0",
+  "description": "Explains selected text using AI API.",
+  
+  "permissions": [
+    "activeTab"
+  ],
+  
+  "action": {
+    "default_title": "AI Explainer"
+  },
+  
+  "background": {
+    "scripts": ["background.js"]
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src <API URL>;"
+  }
+}

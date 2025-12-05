@@ -1,0 +1,81 @@
+#explain-btn {
+  /* Button position: fixed bottom-right, always visible */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #000000;
+  border: none;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 999999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+
+/* Popup wrapper (holds content + buttons) */
+#explain-popup {
+  /* Popup position: fixed above the button */
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background: #222;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  width: 320px;
+  min-width: 280px;
+  max-width: 320px;
+  /* Max height for the entire popup, including buttons */
+  max-height: 400px;
+  /* Use flexbox to stack content and buttons vertically */
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  z-index: 999999;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  box-sizing: border-box;
+}
+
+/* Scrollable content AREA */
+#explain-popup-content {
+  /* Set max height for content area */
+  max-height: 300px; 
+  min-height: 50px;
+  /* Enable vertical scrolling */
+  overflow-y: auto;
+  overflow-x: hidden;
+  line-height: 1.5;
+  white-space: pre-line;
+  word-wrap: break-word;
+  /* Allows content to fill space above the fixed-height buttons */
+  flex-grow: 1; 
+  /* Small padding below content for separation from buttons */
+  padding-bottom: 8px;
+  box-sizing: border-box;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  width: 100%;
+  text-align: center;
+  padding: 4px 0;
+  cursor: pointer;
+  background: #333;
+  border-radius: 6px;
+  margin-top: 4px;
+  user-select: none;
+  font-size: 12px;
+}
+
+.scroll-btn:hover {
+  background: #444;
+}
