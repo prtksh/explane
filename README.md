@@ -1,6 +1,6 @@
 ## Remember to not share your API Keys to anyone or anywhere. The original developer 'prtksh' is not responsible for any costing/billing afflicted on your account through this project. 
 
-## explane
+## explane [![justforfunnoreally.dev badge](https://img.shields.io/badge/justforfunnoreally-dev-9ff)](https://justforfunnoreally.dev)
 a small popup that explains any text you highlight on your browser.
 
 ## before you run
